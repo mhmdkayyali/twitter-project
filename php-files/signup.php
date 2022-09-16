@@ -7,7 +7,6 @@ $email = $_POST["email"];
 $dob = $_POST["dob"];
 $user_password = $_POST["user_password"];
 
-$email = $_POST["email"];
 $query = $mysqli -> prepare("INSERT INTO users (full_name, email, dob, user_password) VALUE (?, ?, ?, ?)");
 $query = bind_param("ssis", $full_name, $email, $dob, $user_password);
 $query -> execute();
